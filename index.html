@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DBS Delivery — единая служба доставки для селлеров</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-head">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">DBS<span>Delivery</span></div>
+        <div class="locale-switch">
+          <button id="btn-ru" class="lang active">RU</button>
+          <button id="btn-uz" class="lang">UZ</button>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#how" data-ru>Как это работает</a>
+        <a href="#prices" data-ru>Тарифы</a>
+        <a href="#contact" data-ru>Контакты</a>
+        <a href="#how" data-uz>Қандай ишлайди</a>
+        <a href="#prices" data-uz>Тарифлар</a>
+        <a href="#contact" data-uz>Богланиш</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="lead">
+      <div class="lead-left">
+        <h1 data-ru>Единая доставка DBS по всей Узбекистану</h1>
+        <h1 data-uz>DBS учун ягона етказиб бериш — бутун Ўзбекистон</h1>
+        <p class="lead-desc" data-ru>Принимайте заказы из любого региона — мы заберем у селлера и доставим клиенту. Одно окно, одна ответственность.</p>
+        <p class="lead-desc" data-uz>Ҳар қандай ҳудуддан буюртмаларни қабул қилинг — биз селлердан олиб, харидорга етказамиз. Битта ойна, битта жавобгарлик.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact" data-ru>Оформить доставку</a>
+          <a class="btn ghost" href="#how" data-ru>Как это работает</a>
+          <a class="btn primary" href="#contact" data-uz>Етказиб беришни буюртма килиш</a>
+          <a class="btn ghost" href="#how" data-uz>Қандай ишлайди</a>
+        </div>
+      </div>
+      <div class="lead-right">
+        <div class="card">
+          <h3 data-ru>Быстрая заявка</h3>
+          <h3 data-uz>Тез ариза</h3>
+          <form id="orderForm" action="send.php" method="post">
+            <label data-ru>Имя селлера</label><label data-uz>Селлер исми</label>
+            <input name="seller_name" required>
+            <label data-ru>Телефон</label><label data-uz>Телефон</label>
+            <input name="phone" placeholder="+998" required>
+            <label data-ru>Город доставки</label><label data-uz>Етказиш шаҳри</label>
+            <input name="to_city" required>
+            <label data-ru>Товары / кол-во</label><label data-uz>Маҳсул ва миқдор</label>
+            <textarea name="items" rows="3" placeholder="SKU1 x1, SKU2 x3" required></textarea>
+            <button class="btn primary" type="submit" id="submitBtn" data-ru>Отправить</button>
+            <button class="btn primary" type="submit" id="submitBtnUz" data-uz>Юбориш</button>
+            <div id="resp" class="resp"></div>
+          </form>
+        </div>
+        <div class="trust">Работаем с DBS-селлерами по всей РУ</div>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <h2 data-ru>Как это работает</h2>
+      <h2 data-uz>Қандай ишлайди</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h4 data-ru>Оформление</h4>
+          <h4 data-uz>Буюртма бериш</h4>
+          <p data-ru>Селлер оставляет заявку на сайте — указывает товары и город клиента.</p>
+          <p data-uz>Селлер веб-сайтда буюртмани қолдиради — товар ва мижоз шаҳрини кўрсатади.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h4 data-ru>Забор и отправка</h4>
+          <h4 data-uz>Олиб кетиш ва юбориш</h4>
+          <p data-ru>Мы забираем товар в Ташкенте и отправляем в регион через проверенных партнёров.</p>
+          <p data-uz>Биз Тошкентда товарни олиб, шериклар орқали ҳудудга юбориламиз.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h4 data-ru>Доставка клиенту</h4>
+          <h4 data-uz>Мижозга етказиш</h4>
+          <p data-ru>Локальные курьеры доставляют заказ до двери клиента — мы контролируем статус.</p>
+          <p data-uz>Маҳаллий курьерлар буюртмани етказиб беради — биз ҳолатни назорат қиламиз.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" class="prices">
+      <h2 data-ru>Тарифы (примерно)</h2>
+      <h2 data-uz>Тарифлар (тахминий)</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3 data-ru>Город</h3><h3 data-uz>Шаҳар</h3>
+          <p class="big">20 000 сум</p>
+          <p data-ru>Доставка по городу</p>
+          <p data-uz>Шаҳар ичида</p>
+        </div>
+        <div class="price-card">
+          <h3 data-ru>Область</h3><h3 data-uz>Вилоят</h3>
+          <p class="big">35 000 сум</p>
+          <p data-ru>Межгород</p>
+          <p data-uz>Вилоятларга</p>
+        </div>
+        <div class="price-card">
+          <h3 data-ru>Отдалённые регионы</h3><h3 data-uz>Олдинги минтақалар</h3>
+          <p class="big">45 000 сум</p>
+          <p data-ru>Доставим в любой регион</p>
+          <p data-uz>Ҳар қандай минтақага</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 data-ru>Контакты</h2>
+      <h2 data-uz>Боғланиш</h2>
+      <div class="contact-inner">
+        <div class="contact-left">
+          <p data-ru><strong>Telegram:</strong> @your_bot_username</p>
+          <p data-uz><strong>Telegram:</strong> @your_bot_username</p>
+          <p data-ru><strong>Email:</strong> hello@dbs-delivery.uz</p>
+          <p data-uz><strong>Email:</strong> hello@dbs-delivery.uz</p>
+        </div>
+        <div class="contact-right">
+          <form id="contactForm" action="send.php" method="post">
+            <input name="seller_name" placeholder="Имя" required>
+            <input name="phone" placeholder="+998" required>
+            <input name="to_city" placeholder="Город доставки" required>
+            <textarea name="items" placeholder="Товары / кол-во" required></textarea>
+            <button class="btn primary" type="submit" id="submitContact">Отправить заявку</button>
+            <div id="resp2" class="resp"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© DBS Delivery — 2025</div>
+        <div>Служба доставки для DBS селлеров</div>
+      </div>
+    </footer>
+  </main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
